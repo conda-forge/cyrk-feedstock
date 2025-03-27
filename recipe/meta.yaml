@@ -23,7 +23,7 @@ requirements:
     - python
     - setuptools >=64.0.0
     - numpy  # empty version spec will pick up channel pinnings
-    - numpy >=1.22,<2  # cyrk specific pinnings also enforced
+    # - numpy >=1.22,<2  # cyrk specific pinnings also enforced
     - cython >=3.0.0
     - wheel >=0.38
     - pip
