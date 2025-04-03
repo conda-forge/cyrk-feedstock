@@ -20,21 +20,18 @@ requirements:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
     - {{ stdlib('c') }}
-    - numpy
-    - python
-    - cython
   host:
     - python
-    - setuptools >=64.0.0
+    - setuptools  >=64.0.0
     - numpy
-    - cython >=3.0.0
-    - wheel >=0.38
+    - cython  >=3.0.0
+    - wheel  >=0.38
     - pip
   run:
     - python
-    - numba >=0.54.1
-    - scipy >=1.9.3
-    - numpy
+    - numba  >=0.54.1
+    - scipy  >=1.9.3
+    - numpy  <2.0.0
 
 test:
   imports:
