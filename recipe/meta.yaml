@@ -1,5 +1,5 @@
 {% set name = "CyRK" %}
-{% set version = "0.13.0" %}
+{% set version = "0.12.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/cyrk-{{ version }}.tar.gz
-  sha256: 3e57e33522d00b518ed4f7ab290d2827d2310c5f91af6c1a15d0c42d757c617f
+  sha256: 8d9eabf65509660a4785bd861ceb479edc877a04b8a39aea8c0faffae0fbbc6e
 
 build:
-  skip: true  # [py>313]
+  skip: true  # [py>312]
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   number: 0
 
@@ -23,6 +23,7 @@ requirements:
     - python
     - setuptools >=64.0.0
     - numpy  # empty version spec will pick up channel pinnings
+    # - numpy >=1.22,<2  # cyrk specific pinnings also enforced
     - cython >=3.0.0
     - wheel >=0.38
     - pip
