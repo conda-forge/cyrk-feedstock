@@ -10,7 +10,7 @@ source:
   sha256: 3e57e33522d00b518ed4f7ab290d2827d2310c5f91af6c1a15d0c42d757c617f
 
 build:
-  skip: true  # [py>313]
+  skip: true  # [py>=314]
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   number: 0
 
@@ -22,15 +22,15 @@ requirements:
   host:
     - python
     - setuptools >=64.0.0
-    - numpy
     - cython >=3.0.0
     - wheel >=0.38
     - pip
+    - numpy
   run:
     - python
     - numba >=0.54.1
     - scipy >=1.9.3
-    - numpy
+    - numpy >=1.22
 
 test:
   imports:
