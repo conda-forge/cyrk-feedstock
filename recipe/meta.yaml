@@ -23,7 +23,7 @@ requirements:
   host:
     - python
     - setuptools  >=64.0.0
-    - numpy
+    - numpy  <2.0.0
     - cython  >=3.0.0
     - wheel  >=0.38
     - pip
