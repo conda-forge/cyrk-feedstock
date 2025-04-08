@@ -18,6 +18,14 @@ requirements:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
     - {{ stdlib('c') }}
+    - python
+    - setuptools
+    - numpy
+    - cython
+    - wheel
+    - pip
+    - scipy
+    - numba
   host:
     - python
     - setuptools
