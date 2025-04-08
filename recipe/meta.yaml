@@ -25,9 +25,15 @@ requirements:
     - cython
     - wheel
     - pip
+    - scipy
+    - numpy
   run:
     - python
-    - numba
+    - setuptools
+    - numpy
+    - cython
+    - wheel
+    - pip
     - scipy
     - numpy
 
