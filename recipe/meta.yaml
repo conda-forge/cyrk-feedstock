@@ -11,7 +11,7 @@ source:
 
 build:
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
   skip: true  # [py<39]
 
 requirements:
@@ -37,6 +37,12 @@ requirements:
     - cython
     - scipy
     - numba
+
+# Explicitly include pyx and pxd files in the package data
+package_data:
+  {{ name|lower }}:
+    - "CyRK/**/*.pyx"
+    - "CyRK/**/*.pxd"
 
 test:
   imports:
