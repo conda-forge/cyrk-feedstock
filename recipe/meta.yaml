@@ -1,5 +1,6 @@
 {% set name = "CyRK" %}
 {% set version = "0.13.1" %}
+{% set numpy = numpy_version %}
 
 package:
   name: {{ name|lower }}
@@ -12,36 +13,25 @@ source:
 build:
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   number: 0
+  skip: true  # [py<39]
 
 requirements:
   build:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
     - {{ stdlib('c') }}
-    - python
-    - setuptools
-    - numpy
-    - cython
-    - wheel
-    - pip
-    - scipy
-    - numba
+    - numpy {{ numpy }}
   host:
     - python
     - setuptools
-    - numpy
+    - numpy {{ numpy }}
     - cython
     - wheel
     - pip
-    - scipy
-    - numba
   run:
     - python
-    - setuptools
     - numpy
     - cython
-    - wheel
-    - pip
     - scipy
     - numba
 
