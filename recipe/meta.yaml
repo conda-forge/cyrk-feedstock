@@ -1,5 +1,5 @@
 {% set name = "CyRK" %}
-{% set version = "0.13.3" %}
+{% set version = "0.13.4" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/cyrk-{{ version }}.tar.gz
-  sha256: 2b678a5691d6bf6f87384d129e3188e19ed7c35a9cb0cab28e2a3b575e2a298c
+  sha256: 0b1093418f0f1c6da0bfb7a0da0eab5b485c506da04860406c46b865b930bdf9
 
 build:
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
   skip: true  # [py<39]
 
 requirements:
@@ -43,6 +43,21 @@ package_data:
   {{ name|lower }}:
     - "CyRK/**/*.pyx"
     - "CyRK/**/*.pxd"
+    - "CyRK/array/interp_common.c"
+    - "CyRK/cy/common.cpp"
+    - "CyRK/cy/common.hpp"
+    - "CyRK/cy/cysolver.cpp"
+    - "CyRK/cy/cysolver.hpp"
+    - "CyRK/cy/rk.cpp"
+    - "CyRK/cy/rk.hpp"
+    - "CyRK/cy/cysolve.cpp"
+    - "CyRK/cy/cysolve.hpp"
+    - "CyRK/cy/cy_array.cpp"
+    - "CyRK/cy/cy_array.hpp"
+    - "CyRK/cy/dense.cpp"
+    - "CyRK/cy/dense.hpp"
+    - "CyRK/cy/cysolution.cpp"
+    - "CyRK/cy/cysolution.hpp"
 
 test:
   imports:
