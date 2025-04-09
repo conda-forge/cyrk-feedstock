@@ -1,6 +1,5 @@
 {% set name = "CyRK" %}
 {% set version = "0.13.1" %}
-{% set numpy = numpy_version %}
 
 package:
   name: {{ name|lower }}
