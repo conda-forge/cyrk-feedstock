@@ -38,27 +38,6 @@ requirements:
     - scipy
     - numba
 
-# Explicitly include pyx and pxd files in the package data
-package_data:
-  {{ name|lower }}:
-    - "CyRK/**/*.pyx"
-    - "CyRK/**/*.pxd"
-    - "CyRK/array/interp_common.c"
-    - "CyRK/cy/common.cpp"
-    - "CyRK/cy/common.hpp"
-    - "CyRK/cy/cysolver.cpp"
-    - "CyRK/cy/cysolver.hpp"
-    - "CyRK/cy/rk.cpp"
-    - "CyRK/cy/rk.hpp"
-    - "CyRK/cy/cysolve.cpp"
-    - "CyRK/cy/cysolve.hpp"
-    - "CyRK/cy/cy_array.cpp"
-    - "CyRK/cy/cy_array.hpp"
-    - "CyRK/cy/dense.cpp"
-    - "CyRK/cy/dense.hpp"
-    - "CyRK/cy/cysolution.cpp"
-    - "CyRK/cy/cysolution.hpp"
-
 test:
   imports:
     - CyRK
