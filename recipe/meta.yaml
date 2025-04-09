@@ -1,5 +1,5 @@
 {% set name = "CyRK" %}
-{% set version = "0.13.1" %}
+{% set version = "0.13.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/cyrk-{{ version }}.tar.gz
-  sha256: 443d3c30249f4ec2907792af9e7c56964974b77ec926419b99c539cf02871f9f
+  sha256: 3d58d28472b86f7cb2cac1f19fd9c7565687dafb8d87185218c4318dc4463c35
 
 build:
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
@@ -20,14 +20,14 @@ requirements:
     - {{ compiler('cxx') }}
     - {{ stdlib('c') }}
     - numpy
-    - numpy <2.0  # [py<313]
-    - numpy >=2.0  # [py>=313]
+    # - numpy <2.0  # [py<313]
+    # - numpy >=2.0  # [py>=313]
   host:
     - python
     - setuptools
     - numpy
-    - numpy <2.0  # [py<313]
-    - numpy >=2.0  # [py>=313]
+    # - numpy <2.0  # [py<313]
+    # - numpy >=2.0  # [py>=313]
     - cython
     - wheel
     - pip
