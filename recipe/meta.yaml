@@ -1,5 +1,5 @@
 {% set name = "CyRK" %}
-{% set version = "0.13.3" %}
+{% set version = "0.13.5" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/cyrk-{{ version }}.tar.gz
-  sha256: 2b678a5691d6bf6f87384d129e3188e19ed7c35a9cb0cab28e2a3b575e2a298c
+  sha256: f469bd87dff296ece6143b681435087bcb7331a9c6670f91e556b7dce2044607
 
 build:
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
   skip: true  # [py<39]
 
 requirements:
@@ -37,12 +37,6 @@ requirements:
     - cython
     - scipy
     - numba
-
-# Explicitly include pyx and pxd files in the package data
-package_data:
-  {{ name|lower }}:
-    - "CyRK/**/*.pyx"
-    - "CyRK/**/*.pxd"
 
 test:
   imports:
