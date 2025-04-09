@@ -1,5 +1,5 @@
 {% set name = "CyRK" %}
-{% set version = "0.13.2" %}
+{% set version = "0.13.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/cyrk-{{ version }}.tar.gz
-  sha256: 3d58d28472b86f7cb2cac1f19fd9c7565687dafb8d87185218c4318dc4463c35
+  sha256: 2b678a5691d6bf6f87384d129e3188e19ed7c35a9cb0cab28e2a3b575e2a298c
 
 build:
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
