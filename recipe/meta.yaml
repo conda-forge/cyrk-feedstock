@@ -11,7 +11,7 @@ source:
 
 build:
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
   skip: true  # [py<39]
 
 requirements:
@@ -58,7 +58,7 @@ about:
     with using pure Python-based solvers like SciPy's `solve_ivp`.
   license: CC-BY-SA-4.0
   license_file: LICENSE.md
-  doc_url: https://github.com/jrenaud90/CyRK/tree/main/Documentation
+  doc_url: https://cyrk.readthedocs.io/en/latest/
   dev_url: https://github.com/jrenaud90/CyRK
 
 extra:
