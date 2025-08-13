@@ -11,7 +11,7 @@ Summary: Runge-Kutta ODE Integrator Implemented in Cython and Numba.
 
 Development: https://github.com/jrenaud90/CyRK
 
-Documentation: https://github.com/jrenaud90/CyRK/tree/main/Documentation
+Documentation: https://cyrk.readthedocs.io/en/latest/
 
 CyRK provides fast integration tools to solve systems of ODEs using an adaptive time stepping scheme.
 CyRK can accept differential equations that are written in pure Python, njited numba, or cython-based cdef
