@@ -20,11 +20,13 @@ requirements:
     - {{ compiler('cxx') }}
     - {{ stdlib('c') }}
     - numpy
+    # - numpy <2.0  # [py<313]
     # - numpy >=2.0  # [py>=313]
   host:
     - python
     - setuptools
     - numpy
+    # - numpy <2.0  # [py<313]
     # - numpy >=2.0  # [py>=313]
     - cython
     - wheel
