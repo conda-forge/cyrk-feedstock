@@ -5,7 +5,7 @@ Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/cyrk-feedstock/
 
 Home: https://github.com/jrenaud90/CyRK
 
-Package license: CC-BY-SA-4.0
+Package license: Apache 2.0
 
 Summary: Runge-Kutta ODE Integrator Implemented in Cython and Numba.
 
