@@ -56,7 +56,7 @@ about:
     functions. These kinds of functions are generally easier to implement than pure c functions and can be used in
     existing Python software. Using CyRK can speed up development time while avoiding the slow performance that comes
     with using pure Python-based solvers like SciPy's `solve_ivp`.
-  license: Apache 2.0
+  license: Apache-2.0
   license_file: LICENSE.md
   doc_url: https://cyrk.readthedocs.io/en/latest/
   dev_url: https://github.com/jrenaud90/CyRK
