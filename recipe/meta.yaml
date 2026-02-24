@@ -28,11 +28,17 @@ requirements:
     - cython
     - wheel
     - pip
+    - vcomp14      # [win]
+    - llvm-openmp  # [osx]
+    - libgomp      # [linux]
   run:
     - python
     - numpy
     - scipy
     - numba
+    - vcomp14      # [win]
+    - llvm-openmp  # [osx]
+    - libgomp      # [linux]
 
 test:
   imports:
