@@ -1,5 +1,5 @@
 {% set name = "CyRK" %}
-{% set version = "0.16.1" %}
+{% set version = "0.17.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/cyrk-{{ version }}.tar.gz
-  sha256: 12870d767a8aeaeab19c46e250a87cf371af1824927231a10aa1b51e31025f9f
+  sha256: 4c343ff23261ebfcddc7b09ede4bf1bf755be732dec15ca033fa7deaae0eb144
 
 build:
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
@@ -43,7 +43,7 @@ test:
     - CyRK
   commands:
     - pip check
-    - python -c "import CyRK; CyRK.test_nbrk(); CyRK.test_cysolver(); CyRK.test_pysolver()"
+    - python -c "import CyRK; CyRK.test_nbrk(); CyRK.test_cysolver(); CyRK.test_pysolver(); CyRK.test_nbsolver()"
   requires:
     - pip
 
@@ -56,7 +56,7 @@ about:
     functions. These kinds of functions are generally easier to implement than pure c functions and can be used in
     existing Python software. Using CyRK can speed up development time while avoiding the slow performance that comes
     with using pure Python-based solvers like SciPy's `solve_ivp`.
-  license: CC-BY-SA-4.0
+  license: Apache 2.0
   license_file: LICENSE.md
   doc_url: https://cyrk.readthedocs.io/en/latest/
   dev_url: https://github.com/jrenaud90/CyRK
