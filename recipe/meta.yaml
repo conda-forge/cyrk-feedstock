@@ -1,5 +1,5 @@
 {% set name = "CyRK" %}
-{% set version = "0.17.2" %}
+{% set version = "0.18.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/cyrk-{{ version }}.tar.gz
-  sha256: 0a6c25d90606741c7e5d192d4ebaaa101c134168bce72e628556af45ccbbdf56
+  sha256: f661d3e7a0625113f83ced8e3636d7e0b962329663c498eaa06aba6034aa87d8
 
 build:
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
@@ -53,7 +53,8 @@ about:
   home: https://github.com/jrenaud90/CyRK
   summary: Runge-Kutta ODE Integrator Implemented in Cython and Numba.
   description: |
-    CyRK provides fast integration tools to solve systems of ODEs using an adaptive time stepping scheme.
+    CyRK provides fast integration tools to solve systems of ODEs using an adaptive time stepping scheme and
+    either explicit (e.g., RK45) or implicit (e.g., LSODA) methods.
     CyRK can accept differential equations that are written in pure Python, njited numba, or cython-based cdef
     functions. These kinds of functions are generally easier to implement than pure c functions and can be used in
     existing Python software. Using CyRK can speed up development time while avoiding the slow performance that comes
