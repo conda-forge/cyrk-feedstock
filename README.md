@@ -13,7 +13,8 @@ Development: https://github.com/jrenaud90/CyRK
 
 Documentation: https://cyrk.readthedocs.io/en/latest/
 
-CyRK provides fast integration tools to solve systems of ODEs using an adaptive time stepping scheme.
+CyRK provides fast integration tools to solve systems of ODEs using an adaptive time stepping scheme and
+either explicit (e.g., RK45) or implicit (e.g., LSODA) methods.
 CyRK can accept differential equations that are written in pure Python, njited numba, or cython-based cdef
 functions. These kinds of functions are generally easier to implement than pure c functions and can be used in
 existing Python software. Using CyRK can speed up development time while avoiding the slow performance that comes
