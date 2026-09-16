@@ -1,14 +1,14 @@
 {% set name = "CyRK" %}
-{% set version = "0.19.0" %}
+{% set version = "0.19.1" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/cyrk-{{ version }}.tar.gz
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/cyrk-{{ version }}.tar.gz
   # Replace with the sha256 of the version's sdist on PyPI (see "conda-forge upload.md").
-  sha256: 47a253c204442fbe02626a8879412a63289bdd6bda447a3873dcd2a16e7c0ea6
+  sha256: 4528c574fcebc0cff1e0b4e8e6860bd791d156cfb96ad742641e3411cb705e48
 
 build:
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
